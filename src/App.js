@@ -1,23 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
+// import Card from './components/card';
 import './App.css';
+import SearchBar from './components/searchbar';
+
+const products = [
+  {  price: 125, title: "rurzowe japko" },
+  {  price: 100, title: "rzułte japko"}];
+
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <SearchBar />
       </header>
     </div>
   );
