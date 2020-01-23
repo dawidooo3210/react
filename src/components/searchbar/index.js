@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Card from '../card';
+import './style.scss'
 
 const products = [
   {  price: 125, text: "rurzowe japko" },
@@ -16,13 +17,15 @@ const SearchBar = () => {
   return (
     <>
           <input type="number" onChange={handleChange} value={value}/>
-          {
-            products
-             .filter(el => el.text.includes(value) )
-             .map((pro, key) =>(
-                <Card key={key} price={pro.price} text={pro.text}/>
-             ))
-          }
+          <div className="cards">
+            {
+              products
+               .filter(el => el.text.includes(value) )
+               .map((pro, key) =>(
+                  <Card key={key} price={pro.price} text={pro.text}/>
+               ))
+            }
+          </div>
    </>
   );
 };

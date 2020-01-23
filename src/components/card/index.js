@@ -2,7 +2,8 @@ import React, {useState} from "react";
 import Img from "../img";
 import P from "../p";
 import Button from "../button";
-// import './style.scss';
+import './style.scss';
+
 
 const Card = (props) => {
   const onChangeHandle = () => {
